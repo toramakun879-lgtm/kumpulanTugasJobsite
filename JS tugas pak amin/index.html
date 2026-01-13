@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulau Kalimantan - Keindahan Kalimantan</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #1a6e3a, #2e8b57);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+        }
+
+        nav {
+            background-color: #0166ff;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: #004fa8;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #004586;
+            padding-bottom: 10px;
+        }
+
+        /* Image Slider Styles */
+        .slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .slider-btn {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-btn:hover {
+            background-color: #003af8;
+        }
+
+        /* Content Styles */
+        .content-section {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #005be4;
+            margin: 15px 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0166ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Profile Page Styles */
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .profile-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .profile-info h3 {
+            color: #1a6e3a;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .profile-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .profile-info li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .profile-info li:before {
+            content: "•";
+            color: #1a6e3a;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pulau Kalimantan</h1>
+        <p>Keindahan Alam Pulau Kalimantan</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="wisata.html">Tempat Wisata</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2 class="section-title">Selamat Datang di Pulau Kalimantan</h2>
+        
+        <div class="content-section">
+            <p>Pulau Kalimantan, yang juga dikenal sebagai Borneo, adalah pulau terbesar ketiga di dunia dan merupakan salah satu ikon satwa liar serta "paru-paru dunia" karena hutannya yang luas. Pulau ini unik karena wilayahnya dibagi oleh tiga negara: Indonesia (sekitar 73%), Malaysia (sekitar 26%, terdiri dari Sabah dan Sarawak), dan Kesultanan Brunei Darussalam (sekitar 1%). .</p>
+            
+            <div class="highlight">
+                <p>Kalimantan memiliki keanekaragaman hayati yang tinggi, dengan sekitar 15.000 spesies tumbuhan dan satwa liar seperti orang utan dan gajah Kalimantan</p>
+            </div>
+            
+            <p>Pulau Kalimantan terletak di utara Pulau Jawa dan barat Pulau Sulawesi. Dikenal sebagai "Pulau Seribu Sungai", pulau ini dilintasi garis khatulistiwa, menghasilkan iklim tropis. Topografinya beragam, mencakup dataran rendah, rawa, dan pegunungan. Pulau ini berbatasan dengan berbagai laut dan selat, termasuk Laut Cina Selatan, Laut Sulawesi, dan Selat Makassar</p>
+        </div>
+        
+        <h2 class="section-title">Galeri Pulau Kalimantan</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="Taman Nasional Tanjung Puting.jpg" alt="Taman Nasional Tanjung Puting">
+                    <div class="slide-caption">Taman Nasional Tanjung Puting</div>
+                </div>
+                <div class="slide">
+                    <img src="Kepulauan Derawann.jpg" alt=" Kepulauan Derawan">
+                    <div class="slide-caption"> Kepulauan Derawan</div>
+                </div>
+                <div class="slide">
+                    <img src="Loksado dan Pegunungan Meratus.jpg" alt="Loksado dan Pegunungan Meratus">
+                    <div class="slide-caption">Loksado dan Pegunungan Meratus</div>
+                </div>
+                <div class="slide">
+                    <img src="sungai mahakam.jpg" alt="Sungai Mahakam">
+                    <div class="slide-caption">Sungai Mahakam</div>
+                </div>
+                <div class="slide">
+                    <img src="Taman Nasional Betung Kerihun.jpg" alt="Taman Nasional Betung Kerihun">
+                    <div class="slide-caption">Taman Nasional Betung Kerihun</div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn prev">Sebelumnya</button>
+                <button class="slider-btn next">Selanjutnya</button>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h3>Keunikan Pulau Kalimantan</h3>
+            <p>Kalimantan memiliki beberapa keunikan yang tidak ditemukan di tempat lain:</p>
+            <ul>
+                <li>Pulau Terbesar Ketiga di Dunia</li>
+                <li>Pulau Seribu Sungai</li>
+                <li>Paru-paru Dunia</li>
+                <li>Kekayaan Keanekaragaman Hayati</li>
+                <li>Habitat Satwa Endemik</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Website Pulau Kalimantan. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Image Slider JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Function to update slider position
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            // Next slide function
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            // Previous slide function
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            // Event listeners for buttons
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ExploreIndo - Beranda</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ebe8e8;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+   .grid-container {
+      display: grid;
+      grid-template-areas: 
+        "header header header"
+        "sidebar1 article sidebar2"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 20px;
+      min-height: 100vh;
+      padding: auto;
+      max-width: auto;
+      margin: 0 auto;
+    }
+    header {
+      grid-area: header;
+      background-color: #264653;
+      color: white;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #3498db;
+    }
+
+    @media (max-width: 992px) {
+      .grid-container {
+        grid-template-areas: 
+          "header header header"
+          "sidebar1 article article"
+          "sidebar2 sidebar2 sidebar2"
+          "footer footer footer";
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-areas: 
+          "header"
+          "sidebar1"
+          "article"
+          "sidebar2"
+          "footer";
+        grid-template-columns: 1fr;
+        padding: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
+
+    .profil {
+      grid-area: article;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .profil-img img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px 0;
+      border: 5px solid #f1c40f;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .sosmed a {
+      color: #1d20d4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .sosmed a:hover {
+      text-decoration: underline;
+    }
+
+   footer { 
+      grid-area: footer; 
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn,
+    .search-btn,
+    .category-bar a {
+      cursor: pointer;
+    }
+
+    .btn {
+      background-color: #b80000;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+
+    .btn:hover {
+      background-color: #000000;
+    }
+
+    .btn:active,
+    .search-btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>Pembuat</h1>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Beranda</a></li>
+          <li><a href="Artikle.html">Artikel</a></li>
+          <li><a href="Profil.html" class="active">Profil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="profil">
+      <h1>Profil</h1>
+      <div class="profil-img">
+        <img src="foto.jpg" alt="Foto Profil Akbar Mulya Pratama">
+      </div>
+
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah seorang manusia, Selebihnya Rahasia.
+      </p>
+
+      <div class="card">
+        <h3>Data Diri</h3>
+        <ul>
+          <li><strong>Nama:</strong> Akbar Mulya Pratama</li>
+          <li><strong>Alamat:</strong> Demak, Jawa Tengah</li>
+          <li><strong>Hobi:</strong> Sepak Bola, Bermain Game, dan Renang</li>
+          <li><strong>Motto:</strong> "Hidup itu sekali, maka cobalah semua yang kamu inginkan."</li>
+        </ul>
+      </div>
+    <footer>
+      <p>&copy; 2023 Pemerintah Kabupaten Demak. Semua Hak Dilindungi.</p>
+    </footer>
+  </div>
+</body>
+</html>

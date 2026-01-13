@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda Kuliner indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #e8f0f2;
+      color: #264653;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: #0805ee;
+      color: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .search-box {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      flex-grow: 1;
+      max-width: 250px;
+      margin: 10px 15px;
+    }
+
+    .search-btn {
+      padding: 9px 20px;
+      background: #000000;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .search-btn:hover {
+      background: #000000;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                  url("backround.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 140px 30px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .hero a {
+      display: inline-block;
+      background: #021af1;
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: #23a7ff;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      animation: slideUp 0.8s ease-out;
+    }
+
+    .content h3 {
+      font-size: 2rem;
+      color: #264653;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .content p {
+      text-align: center;
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #264653;
+      color: #fff;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 80px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .search-box {
+        width: 100%;
+        margin: 10px 0;
+      }
+      .search-btn {
+        width: 100%;
+        margin-top: 5px;
+      }
+      .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img" />
+        <span>Web Kuliner</span>
+      </div>
+      <input type="text" placeholder="Cari Makanan..." class="search-box"/>
+      <button class="search-btn">Cari</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Selamat Datang di Web Kuliner</h2>
+    <p>Temukan makanan kuliner indonesia yang menyimpan kisah dan budaya yang luar biasa.</p>
+    <a href="artikel.html">Lihat Artikel Kuliner</a>
+  </section>
+
+  <section class="content">
+    <h3>Tentang Website Ini</h3>
+    <p>
+      platform online yang digunakan oleh bisnis dan individu untuk mempromosikan dan menjual produk makanan dan minuman, serta menyediakan informasi terkait dunia kuliner seperti resep, ulasan restoran, dan direktori bisnis makanan
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Web Kuliner. Didesain dengan cinta untuk kekayaan Indonesia.
+  </footer>
+</body>
+</html>

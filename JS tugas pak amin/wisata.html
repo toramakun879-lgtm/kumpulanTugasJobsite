@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempat Wisata - Website Pulau Kalimantan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pulau Kalimantan</h1>
+        <p>Keindahan Alam Kalimantan</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="wisata.html">Tempat Wisata</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2 class="section-title">Tempat Wisata di Kalimantan</h2>
+        
+        <div class="content-section">
+            <h3>1. Taman Nasional Tanjung Puting</h3>
+            <p>Taman Nasional Tanjung Puting terkenal sebagai pusat rehabilitasi orangutan terbesar di dunia. Taman ini menjadi rumah bagi ribuan orangutan yang hidup di habitat alami mereka.</p>
+            
+            <h3>2. Kepulauan Derawan</h3>
+            <p>Kepulauan Derawan adalah destinasi wisata bahari yang menakjubkan dengan keindahan bawah lautnya. Terletak di Kabupaten Berau, Kalimantan Timur, Derawan memiliki pantai berpasir putih, air laut yang jernih, dan terumbu karang yang spektakuler.</p>
+            
+            <h3>3. Loksado dan Pegunungan Meratus</h3>
+            <p>Loksado adalah sebuah desa di pegunungan Meratus yang menawarkan pemandangan alam yang memukau dengan hutan tropis yang hijau dan sungai-sungai yang jernih. Salah satu kegiatan populer di Loksado adalah bamboo rafting, yaitu menyusuri sungai Amandit menggunakan rakit bambu tradisional.</p>
+            
+            <h3>4. Sungai Mahakam</h3>
+            <p>Sungai Mahakam adalah sungai terpanjang di Kalimantan Timur dan merupakan urat nadi kehidupan bagi masyarakat setempat. Wisatawan dapat menyusuri Sungai Mahakam dengan menggunakan kapal klotok untuk menikmati keindahan alam dan kehidupan sehari-hari di sepanjang tepi sungai.</p>
+            
+            <h3>5. Taman Nasional Betung Kerihun</h3>
+            <p>Taman Nasional Betung Kerihun terletak di wilayah perbatasan Indonesia-Malaysia dan merupakan bagian dari hutan hujan tropis yang sangat kaya akan keanekaragaman hayati.</p>
+        
+        <h2 class="section-title">Galeri Wisata Pulau Kalimantan</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="Taman Nasional Tanjung Puting.jpg" alt="Taman Nasional Tanjung Puting">
+                    <div class="slide-caption">Taman Nasional Tanjung Puting</div>
+                </div>
+                <div class="slide">
+                    <img src="Kepulauan Derawann.jpg" alt="Kepulauan Dermawan">
+                    <div class="slide-caption">Kepulauan Dermawan</div>
+                </div>
+                <div class="slide">
+                    <img src="Loksado dan Pegunungan Meratus.jpg" alt="Gunung Meratus">
+                    <div class="slide-caption">Gunung Meratus</div>
+                </div>
+                <div class="slide">
+                    <img src="sungai mahakam.jpg" alt="Sungai Mahakam">
+                    <div class="slide-caption">Sungai Mahakam</div>
+                </div>
+                <div class="slide">
+                    <img src="Taman Nasional Betung Kerihun.jpg" alt="Taman Nasional Betung Kerihun">
+                    <div class="slide-caption">Taman Nasional Betung Kerihun</div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn prev">Sebelumnya</button>
+                <button class="slider-btn next">Selanjutnya</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Website Pulau Kalimantan. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // Image Slider JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+            
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>
